@@ -1,0 +1,17 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    background-color:#313E51;
+}
+.text-div{
+    font-size: 16px;
+    color:white;
+    width: 350px;
+}
+.text-title{
+    font-size:10px;
+    color:lightblue;
+    width:350px
+  
+}

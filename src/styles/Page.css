@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+
+.inner-container{
+ 
+    width:80%;
+    display: flex;
+    justify-content: space-between;
+}
+.inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:30px
+}
