@@ -2,12 +2,12 @@
     margin:0px;
     padding:0px;
     box-sizing: border-box;
-    background-color:#313E51;
+    
 }
-.text-div{
-    font-size: 16px;
+.Question-text-div{
+    font-size: 26px;
     color:white;
-    width: 350px;
+    width: 70%;
 }
 .text-title{
     font-size:10px;

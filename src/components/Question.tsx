@@ -5,7 +5,7 @@ function Question(){
     return(
         <div>
            <div className="text-title"><h4>Question 6 of 10</h4></div>
-           <div className="text-div"><p>
+           <div className="Question-text-div"><p>
                  Which of these color contrast ratios defines the minimum WCAG 2.1 Level AA requirement for normal text?
                 </p>
           </div>
