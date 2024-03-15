@@ -1,0 +1,16 @@
+import "../styles/Button.css"
+
+function  Button(){
+    return(
+        <div>
+            <div>
+                <button id="btn">
+                    Submit
+                </button>
+            </div>
+
+        </div>
+    )
+}
+
+export default Button
