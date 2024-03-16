@@ -12,9 +12,10 @@
     width:40%;
     height:50px;
     display:flex;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items: center;
     background-color:#3B4D66 ;
+   
    
 }
 .icon-div{
@@ -43,11 +44,13 @@
     display:flex;
     justify-content:center;
     align-items: center;
-
-   width:100%
+   width:50%;
+  
 }
 
-.text-div h3{
-    background-color:#3B4D66 ;
+#Tab-link{
+    text-decoration:none
 }
-
+.selected-tab{
+    border:2px solid purple;
+}

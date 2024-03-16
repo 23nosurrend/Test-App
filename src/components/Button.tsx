@@ -5,7 +5,7 @@ function  Button(){
         <div>
             <div>
                 <button id="btn">
-                    Submit
+                    Submit Answer
                 </button>
             </div>
 

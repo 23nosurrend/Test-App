@@ -7,6 +7,7 @@ import "./styles/Tab.css"
 import Page from "../src/components/Page1"
 import Tab from './components/Tab'
 import Button from './components/Button'
+import Bar from './components/Downbar'
 // import Question from './components/Question'
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
     {
       path:"btn",
       element:<Button/>
+    },
+    {
+      path:"bar",
+      element:<Bar/>
     }
   ])
   

@@ -8,9 +8,10 @@
     font-size: 26px;
     color:white;
     width: 70%;
+    margin-top:25px
 }
-.text-title{
-    font-size:10px;
+.text-title-Question{
+    font-size:16px;
     color:lightblue;
     width:350px
   

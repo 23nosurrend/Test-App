@@ -7,14 +7,16 @@
     border-radius: 10px;
     align-items: center;
     
+    
 
 }
 .nav-div-inner{
-    width:40%;
+    width:35%;
     height: 50px;
     display:flex;
     justify-content: space-between;
     align-items: center;
+    
     
 }
 .nav-text-div{
@@ -24,7 +26,8 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    width:55%;
+    width:100%;
+   
 }
 .nav-icon-div{
     background-color:#FFF1E9;
@@ -35,6 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+   
     
 }
 #father-nav-div{
