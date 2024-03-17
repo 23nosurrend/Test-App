@@ -1,12 +1,24 @@
 import "../styles/Button.css"
 
-function  Button(){
+
+
+interface buttonProps{
+    buttonText:string;
+    onClick?:()=>void;
+    
+    
+}
+
+function  Button({buttonText,onClick}:buttonProps){
     return(
         <div>
             <div>
-                <button id="btn">
-                    Submit Answer
+                
+                <button id="btn" onClick={onClick} >
+                    {buttonText}
                 </button>
+                
+                
             </div>
 
         </div>

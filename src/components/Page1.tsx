@@ -1,4 +1,6 @@
 import {useState} from "react"
+import {  useNavigate } from "react-router-dom";
+
 import "../styles/Page.css"
 import AccessNav from "./AccessNav"
 import Question from "./Question"
@@ -9,9 +11,16 @@ import "../styles/Tab.css"
 
 function Page(){
     const [selectedTab,setSelectedTab]=useState("")
+    const[isCorrect,setIsCorrect]=useState(false)
+    const navigate=useNavigate()
     
-    const handleTabSelect=(tab:string)=>{
+    const handleTabSelect=(tab:string,correct:boolean)=>{
         setSelectedTab(tab)
+        setIsCorrect(correct)
+    }
+
+    const handleSubmit=()=>{
+        navigate(`/answer/${selectedTab}`)
     }
 
     return(
@@ -28,16 +37,19 @@ function Page(){
                 </div>
                 <div>
                 <div>
-                    <Tab isSelected={selectedTab=="A"} onClick={() => handleTabSelect("A")} text="4:5.1" path="/Question" head="A" backColor="#F4F6FA" textColor="#626C7F" className="custom-tab"/><br></br>
-                    <Tab text="2:5.1" path="/Question" head="B" backColor="#F4F6FA" textColor="#626C7F"  className="custom-tab"  /><br></br>
-                    <Tab text="5:1" path="/Question" head="C" backColor="#F4F6FA" textColor="#626C7F"  className="custom-tab"  /><br></br>
-                    <Tab text="5:1" path="/Question" head="D" backColor="#F4F6FA" textColor="#626C7F" className="custom-tab"  /><br></br>
+                    <Tab isSelected={selectedTab=="A"} isCorrect={isCorrect} onClick={() => handleTabSelect("A",true)} text="4:5.1" path="/Question" head="A" backColor="#F4F6FA" textColor="#626C7F" className="custom-tab"/><br></br>
+                    <Tab  isSelected={selectedTab=="B"} isCorrect={isCorrect} onClick={() => handleTabSelect("B",false)}  text="2:5.1" path="/Question" head="B" backColor="#F4F6FA" textColor="#626C7F"  className="custom-tab"  /><br></br>
+                    <Tab  isSelected={selectedTab=="C"} isCorrect={isCorrect} onClick={() => handleTabSelect("C",false)}      text="5:1" path="/Question" head="C" backColor="#F4F6FA" textColor="#626C7F"  className="custom-tab"  /><br></br>
+                    <Tab  isSelected={selectedTab=="D"} isCorrect={isCorrect} onClick={() => handleTabSelect("D",false)} text="5:1" path="/Question" head="D" backColor="#F4F6FA" textColor="#626C7F" className="custom-tab"  /><br></br>
                     {/* <Tab text="3.5:1"/>
                     <Tab text="2:5.1"/>
                     <Tab text="5:1"/> */}
                 </div>
                 <div>
-                    <Button/>
+                   
+                   <Button buttonText="Submit Answer" onClick={handleSubmit} />
+                   
+                    
                 </div>
                 </div>
             </div>
