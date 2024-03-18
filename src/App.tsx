@@ -18,7 +18,7 @@ function App() {
 
     },
     {
-      path:"Question",
+      path:"Question/:index",
       element:<Page/>
     },
     {

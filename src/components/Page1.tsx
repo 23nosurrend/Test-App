@@ -29,7 +29,10 @@ function Page(){
             <div className="inner">
                 <div className="inner-container">
                 <div id="div-of-Question-Bar">
-                    <div id="Question-div"><Question/></div>
+                    <div id="Question-div">
+                        <Question first={1} last={10}/>
+                        
+                        </div>
                     <div id="div-with-Bar"><Bar/></div>
                     
                     
