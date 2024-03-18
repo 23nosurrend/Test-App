@@ -1,5 +1,5 @@
 import {useState} from "react"
-import {  useNavigate } from "react-router-dom";
+import {  useNavigate,useParams } from "react-router-dom";
 
 import "../styles/Page.css"
 import AccessNav from "./AccessNav"
@@ -8,12 +8,14 @@ import Tab from "./Tab"
 import Button from "./Button"
 import Bar from "./Downbar"
 import "../styles/Tab.css"
+import Data from "../assets/json/data.json"
 
 function Page(){
     const [selectedTab,setSelectedTab]=useState("")
     const[isCorrect,setIsCorrect]=useState(false)
     const navigate=useNavigate()
-    
+
+   
     const handleTabSelect=(tab:string,correct:boolean)=>{
         setSelectedTab(tab)
         setIsCorrect(correct)
@@ -23,6 +25,16 @@ function Page(){
         navigate(`/answer/${selectedTab}`)
     }
 
+    const param=useParams()
+    const num=param.index
+    const category=Data.quizzes[num]
+    const firstQuestion=category.questions[0]
+    const numberOfQuestions=category.questions.length
+    const option=firstQuestion.options
+    console.log(option)
+
+
+
     return(
           <div>
             <div><AccessNav/></div>
@@ -30,7 +42,9 @@ function Page(){
                 <div className="inner-container">
                 <div id="div-of-Question-Bar">
                     <div id="Question-div">
-                        <Question first={1} last={10}/>
+                        <Question first={1} last={numberOfQuestions}
+                         question={firstQuestion.question}
+                        />
                         
                         </div>
                     <div id="div-with-Bar"><Bar/></div>
