@@ -32,3 +32,22 @@ font-weight: bolder;
 #Question-div{
     height:80%
 }
+
+@media (max-width:768px){
+    .inner-container{
+ 
+        width:80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border:1px solid red
+        
+    }
+
+    #Question-div{
+        margin-bottom: 20px;
+    }
+    #div-with-Bar{
+        margin-bottom:20px;
+    }
+}

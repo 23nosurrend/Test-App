@@ -51,6 +51,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width:80%;
+    
    
 }
 .upper-father-div{
@@ -68,6 +69,8 @@
     display: flex;
     gap:10px;
     flex-direction: column;
+    margin-bottom: 20px;
+  
 }
 #greet{
     color:white;
@@ -87,3 +90,80 @@
     font-size:12px;
     font-weight:100;
 }
+
+/* Media Queries: */
+
+@media (max-width: 1024px) {
+    .body-div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width:80%;
+       
+       
+    }
+   #left-div-text{
+    width:60%;
+   
+    margin-bottom: 50px;
+    
+   }
+}
+@media (max-width:769px) {
+    .body-div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width:80%;
+        
+       
+    }
+   #left-div-text{
+    width:80%;
+    
+    margin-bottom: 50px;
+    
+   }
+}
+
+@media (max-width:600px) {
+    .body-div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width:80%;
+        
+       
+    }
+   #left-div-text{
+    width:80%;
+    
+    margin-bottom: 50px;
+    
+   }
+  
+   .component-div{
+    display: flex;
+    gap:10px;
+    width:80%;
+    flex-direction: column;
+    margin-bottom: 20px;
+    
+}
+#greet{
+    color:white;
+    font-size:50px;
+    font-family:'Rubik' sans-serif;
+    font-weight:500;
+}
+#intro-text{
+    color:white;
+    font-size:50px;
+    font-family:'Rubik' sans-serif;
+    font-weight:bold;
+}
+}
+
+
+
+/* Adjust styles for screens smaller than 480px (phones) */

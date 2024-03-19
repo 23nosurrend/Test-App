@@ -5,6 +5,10 @@
     import Tab from "./Tab"
     import Data from "../assets/json/data.json"
     import { useNavigate } from "react-router-dom"
+    import icon1 from "../assets/images/icon-html.svg"
+    import icon2 from "../assets/images/icon-css.svg"
+    import icon3 from "../assets/images/icon-js.svg"
+    import icon4 from "../assets/images/icon-accessibility.svg"
     // import Page from "./Page1"
    
     function Home(){
@@ -13,7 +17,7 @@
         navigate(`/question/${index}`)
     }
     
-        
+      const Iconarr=[icon1,icon2,icon3,icon4]  
         return(
             <>
             <div>
@@ -49,7 +53,7 @@
                     <div className="component-div">
                     {Data.quizzes.map((quiz,index)=>(
                       
-                        <Tab onClick={() => handleTabClick(index)}  key={index}  text={quiz.title}  path="/Question" svg={<img src={quiz.icon}/>}/>
+                        <Tab  onClick={() => handleTabClick(index)}  key={index}  text={quiz.title}  path="/Question" svg={<img src={Iconarr[index]}/>}/>
                     ))}
                        
                         

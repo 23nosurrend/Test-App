@@ -65,3 +65,21 @@
   .incorrect {
     border:2px solid  red; /* Border color when answer is incorrect */
   }
+
+  /*  */
+
+  @media (max-width:600px) {
+    .Tab-div{
+        background-color:#3B4D66 ;
+        width:400px;
+        height:40px;
+        display: flex;
+        justify-content: flex-start;
+        border-radius: 10px;
+        align-items: center;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    
+    }
+   
+}

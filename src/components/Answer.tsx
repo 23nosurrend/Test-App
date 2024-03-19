@@ -2,7 +2,7 @@
 // import { useParams } from "react-router-dom"
 import "../styles/Answer.css"
 import AccessNav from "./AccessNav"
-import Question from "./Question"
+// import Question from "./Question"
 import Tab from "./Tab"
 import Button from "./Button"
 import Bar from "./Downbar"
@@ -20,7 +20,7 @@ function Answer(){
             <div className="inner">
                 <div className="inner-container">
                 <div id="div-of-Question-Bar">
-                    <div id="Question-div"><Question/></div>
+                    <div id="Question-div"></div>
                     <div id="div-with-Bar"><Bar/></div>
                     
                     
