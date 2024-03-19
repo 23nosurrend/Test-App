@@ -9,12 +9,13 @@
 
 }
 .Tab-div-inner{
-    width:40%;
+    width:100%;
     height:50px;
     display:flex;
     justify-content:space-around;
     align-items: center;
     background-color:#3B4D66 ;
+    
    
    
 }
@@ -44,14 +45,23 @@
     display:flex;
     justify-content:center;
     align-items: center;
-   width:50%;
-  
+   width:100%;
+   
 }
 
 #Tab-link{
     text-decoration:none
 }
-.selected-tab{
+
+.selected{
     border:2px solid purple;
-    border-radius: 10px;
+    border-radius: 10px
 }
+
+.correct {
+    border:2px solid  green; /* Border color when answer is correct */
+  }
+  
+  .incorrect {
+    border:2px solid  red; /* Border color when answer is incorrect */
+  }

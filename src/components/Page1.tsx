@@ -11,29 +11,53 @@ import "../styles/Tab.css"
 import Data from "../assets/json/data.json"
 
 function Page(){
-    const [selectedTab,setSelectedTab]=useState("")
-    const[isCorrect,setIsCorrect]=useState(false)
+    const [selectedTab,setSelectedTab]=useState<number|null>(null)
     const navigate=useNavigate()
+    const handleTabClick=(index:number,indexTab:number)=>{
+        navigate(`/question/${index}`)
+        setSelectedTab(indexTab)
+    }
+//this si for submit
+ 
+    
 
    
-    const handleTabSelect=(tab:string,correct:boolean)=>{
-        setSelectedTab(tab)
-        setIsCorrect(correct)
-    }
+   
 
-    const handleSubmit=()=>{
-        navigate(`/answer/${selectedTab}`)
-    }
+    
 
-    const param=useParams()
-    const num=param.index
+    const param=useParams<{index?:string}>()
+    let num:number;
+    if(param.index){
+        num= parseInt(param.index)
+    }else{
+         num=0
+    }
+    // const num=param.index ?parseInt(param.index):0;
+    // console.log(num)
+    
     const category=Data.quizzes[num]
+    console.log(category)
     const firstQuestion=category.questions[0]
     const numberOfQuestions=category.questions.length
     const option=firstQuestion.options
-    console.log(option)
+    const realAnswer:string=firstQuestion.answer
 
+    const submitBtn=()=>{
+    if(selectedTab!==null){
+        if(realAnswer===option[selectedTab]){
+            alert("you made it")
+        }else{
+            alert("no")
+        }
+        
+    }else{
+        alert("please select answer")
+    }
+ }
+    console.log("answers:",option)
 
+    const head:[string,string,string,string]=["A","B","C","D"]
 
     return(
           <div>
@@ -54,17 +78,31 @@ function Page(){
                 </div>
                 <div>
                 <div>
-                    <Tab isSelected={selectedTab=="A"} isCorrect={isCorrect} onClick={() => handleTabSelect("A",true)} text="4:5.1" path="/Question" head="A" backColor="#F4F6FA" textColor="#626C7F" className="custom-tab"/><br></br>
-                    <Tab  isSelected={selectedTab=="B"} isCorrect={isCorrect} onClick={() => handleTabSelect("B",false)}  text="2:5.1" path="/Question" head="B" backColor="#F4F6FA" textColor="#626C7F"  className="custom-tab"  /><br></br>
+                    {option.map((answers:string,Tabindex:number)=>(
+                    <div>
+                        
+                    <Tab 
+                    isSelected={selectedTab===Tabindex}  
+                    key={Tabindex} onClick={()=>handleTabClick(num,Tabindex)} 
+                     text={answers} path="/Question" head={head[Tabindex]}
+                      backColor="#F4F6FA" 
+                      textColor="#626C7F"
+                       className="custom-tab"
+                       isCorrect={selectedTab!==null&& realAnswer===option[selectedTab]}
+                       /><br></br>
+                    </div>
+                    ))}
+                   
+                    {/* <Tab  isSelected={selectedTab=="B"} isCorrect={isCorrect} onClick={() => handleTabSelect("B",false)}  text="2:5.1" path="/Question" head="B" backColor="#F4F6FA" textColor="#626C7F"  className="custom-tab"  /><br></br>
                     <Tab  isSelected={selectedTab=="C"} isCorrect={isCorrect} onClick={() => handleTabSelect("C",false)}      text="5:1" path="/Question" head="C" backColor="#F4F6FA" textColor="#626C7F"  className="custom-tab"  /><br></br>
-                    <Tab  isSelected={selectedTab=="D"} isCorrect={isCorrect} onClick={() => handleTabSelect("D",false)} text="5:1" path="/Question" head="D" backColor="#F4F6FA" textColor="#626C7F" className="custom-tab"  /><br></br>
+                    <Tab  isSelected={selectedTab=="D"} isCorrect={isCorrect} onClick={() => handleTabSelect("D",false)} text="5:1" path="/Question" head="D" backColor="#F4F6FA" textColor="#626C7F" className="custom-tab"  /><br></br> */}
                     {/* <Tab text="3.5:1"/>
                     <Tab text="2:5.1"/>
                     <Tab text="5:1"/> */}
                 </div>
                 <div>
                    
-                   <Button buttonText="Submit Answer" onClick={handleSubmit} />
+                   <Button buttonText="Submit Answer" onClick={submitBtn} />
                    
                     
                 </div>

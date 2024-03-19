@@ -13,14 +13,16 @@ interface Tabprops{
     textColor?:string;
     className?:string;
     isSelected?:boolean;
+    isCorrect?:boolean;
+
     onClick?:()=>void
-   isCorrect?:boolean
+   
   
 
 }
 function Tab({text,svg,head,path,backColor,textColor,className,isSelected,isCorrect,onClick}:Tabprops){
-  const tabClassName=`${className} ${isSelected ? "selected-tab" : ""} ${isCorrect===true ? "correct-tab":isCorrect===false?"incorrect-tab":""}`
-
+  const tabClassName=`${className} ${isSelected ? "selected": ""  } ${isCorrect !== undefined ? (isCorrect ? "correct" : "incorrect") : ""} `
+ 
     return(
         <div  className={ tabClassName} onClick={onClick}>
             <Link to={path} id="Tab-link">
