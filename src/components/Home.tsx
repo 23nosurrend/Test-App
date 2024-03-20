@@ -41,6 +41,7 @@
              <div className="body-father-div">
              <div className="body-div"> 
                     <div id="left-div-text">
+                    <div>
                        <div>
                         <h1 id="greet">Welcome to the </h1>
                         <h3 id="intro-text">Frontend Quiz</h3>
@@ -48,7 +49,7 @@
                        <div>
                         <p id="pick-text">Pick a subject to get started</p>
                        </div>
-                        
+                    </div>
                     </div>
                     <div className="component-div">
                     {Data.quizzes.map((quiz,index)=>(

@@ -132,20 +132,23 @@
         flex-wrap: wrap;
         justify-content: center;
         width:80%;
+       
         
        
     }
    #left-div-text{
-    width:80%;
-    
+    width:100%;
+    border:1px solid green;
     margin-bottom: 50px;
+    display:flex;
+    justify-content: flex-start;
     
    }
   
    .component-div{
     display: flex;
     gap:10px;
-    width:80%;
+    width:100%;
     flex-direction: column;
     margin-bottom: 20px;
     
@@ -155,6 +158,7 @@
     font-size:50px;
     font-family:'Rubik' sans-serif;
     font-weight:500;
+    
 }
 #intro-text{
     color:white;
@@ -162,6 +166,50 @@
     font-family:'Rubik' sans-serif;
     font-weight:bold;
 }
+}
+
+@media (max-width:376px){
+    .body-div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width:80%;
+        border:1px solid green
+        
+       
+    }
+   #left-div-text{
+    width:100%;
+    
+    margin-bottom: 50px;
+    
+   }
+  
+   .component-div{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    width:100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border:1px solid red
+}
+#greet{
+    color:white;
+    font-size:26px;
+    font-family:'Rubik' sans-serif;
+    font-weight:500;
+    border:1px solid red
+}
+#intro-text{
+    color:white;
+    font-size:30px;
+    font-family:'Rubik' sans-serif;
+    font-weight:bold;
+}
+
+
+
 }
 
 
