@@ -7,8 +7,9 @@
 .Question-text-div{
     font-size: 26px;
     color:white;
-    width: 70%;
-    margin-top:25px
+    width: 100%;
+    margin-top:25px;
+    
 }
 .text-title-Question{
     font-size:16px;

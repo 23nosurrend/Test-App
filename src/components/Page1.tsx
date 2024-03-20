@@ -6,6 +6,7 @@ import Tab from "./Tab";
 import Button from "./Button";
 import Bar from "./Downbar";
 import Data from "../assets/json/data.json";
+import "../styles/Page.css"
 
 function Page() {
   const [selectedTab, setSelectedTab] = useState<number | null>(null);
@@ -62,12 +63,12 @@ function Page() {
   const head: [string, string, string, string] = ["A", "B", "C", "D"];
 
   return (
-    <div>
+    <div >
       <div>
         <AccessNav />
       </div>
       <div className="inner">
-        <div className="inner-container">
+        <div className="inner-container" >
           <div id="div-of-Question-Bar">
             <div id="Question-div">
               <Question
@@ -81,7 +82,7 @@ function Page() {
             </div>
           </div>
           <div>
-            <div>
+            <div id="div-answer">
               {option.map((answers: string, Tabindex: number) => (
                 <div key={Tabindex}>
                   <Tab

@@ -1,7 +1,10 @@
 *{
     margin: 0px;
     padding:0px;
+    box-sizing: border-box;
 }
+
+
 
 .inner-container{
  
@@ -9,6 +12,7 @@
     display: flex;
     justify-content: space-between;
    
+   flex-wrap: wrap;
     
 }
 .inner{
@@ -16,7 +20,8 @@
     align-items: center;
     justify-content: center;
     margin-top:30px;
-    border:1px solid red
+   
+    
    
 }
 
@@ -29,9 +34,28 @@ font-weight: bolder;
     display:flex;
     flex-direction: column;
     
+    width:500px
+   
 }
 #Question-div{
-    height:80%
+    height:80%;
+   
+}
+
+
+@media (max-width:1025px){
+    #div-of-Question-Bar{
+        display:flex;
+        flex-direction: column;
+         
+        width:100%
+       
+    }
+    #div-answer{
+        
+        width:800px
+    }
+    
 }
 
 @media (max-width:768px){
@@ -43,6 +67,125 @@ font-weight: bolder;
         justify-content: center;
         
         
+    }
+    #div-answer{
+        
+        width:613px
+    }
+
+    #Question-div{
+        margin-bottom: 20px;
+    }
+    #div-with-Bar{
+        margin-bottom:20px;
+    }
+}
+
+@media (max-width:600px){
+    .inner-container{
+ 
+        width:80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        
+    }
+    #div-answer{
+      
+        width:480px
+    }
+
+    #Question-div{
+        margin-bottom: 20px;
+    }
+    #div-with-Bar{
+        margin-bottom:20px;
+    }
+}
+
+@media (max-width:376px){
+    .inner-container{
+ 
+        width:80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        
+    }
+    #div-answer{
+        
+        width:298px
+    }
+
+    #Question-div{
+        margin-bottom: 20px;
+    }
+    #div-with-Bar{
+        margin-bottom:20px;
+    }
+}
+
+@media (max-width:415px){
+    .inner-container{
+ 
+        width:80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        
+    }
+    #div-answer{
+       
+        width:330px
+    }
+
+    #Question-div{
+        margin-bottom: 20px;
+    }
+    #div-with-Bar{
+        margin-bottom:20px;
+    }
+}
+
+@media (max-width:376px){
+    .inner-container{
+ 
+        width:80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        
+    }
+    #div-answer{
+      
+        width:287px
+    }
+
+    #Question-div{
+        margin-bottom: 20px;
+    }
+    #div-with-Bar{
+        margin-bottom:20px;
+    }
+}
+
+@media (max-width:320px){
+    .inner-container{
+ 
+        width:80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        
+    }
+    #div-answer{
+      
+        width:243px
     }
 
     #Question-div{

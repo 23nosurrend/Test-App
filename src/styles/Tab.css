@@ -74,6 +74,40 @@
   }
 
   /*  */
+  @media (max-width:1025px) {
+    .Tab-div{
+        background-color:#3B4D66 ;
+        width:100%;
+        height:40px;
+        display: flex;
+        justify-content: flex-start;
+        border-radius: 120px;
+        align-items: center;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      
+    }
+   
+}
+
+@media (max-width:769px) {
+    .Tab-div{
+        background-color:#3B4D66 ;
+        width:100%;
+        height:40px;
+        display: flex;
+        justify-content: flex-start;
+        border-radius: 120px;
+        align-items: center;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      
+    }
+   
+}
+
+
+
 
   @media (max-width:600px) {
     .Tab-div{
