@@ -67,7 +67,7 @@ function Page() {
       <div>
         <AccessNav />
       </div>
-      <div className="inner">
+      <div className="page-inner">
         <div className="inner-container" >
           <div id="div-of-Question-Bar">
             <div id="Question-div">

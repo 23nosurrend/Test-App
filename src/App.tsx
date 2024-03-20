@@ -8,6 +8,7 @@ import Page from "../src/components/Page1"
 import Tab from './components/Tab'
 import Answer from "./components/Answer"
 import Bar from './components/Downbar'
+import Final from "./components/Final"
 // import Question from './components/Question'
 
 function App() {
@@ -16,6 +17,10 @@ function App() {
       path:"/",
       element: <Home/>
 
+    },
+    {
+     path:"/final",
+     element:<Final/>
     },
     {
       path:"Question/:index",

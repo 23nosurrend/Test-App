@@ -39,12 +39,12 @@
              </div>
              </div>
              <div className="body-father-div">
-             <div className="body-div"> 
+             <div className="body-div-home"> 
                     <div id="left-div-text">
                     <div>
-                       <div>
-                        <h1 id="greet">Welcome to the </h1>
-                        <h3 id="intro-text">Frontend Quiz</h3>
+                       <div id="first-intro">
+                        <h1 id="greet" className="wel">Welcome to the </h1>
+                        <h3 id="intro-text" className="Frontend-quiz">Frontend Quiz</h3>
                        </div>
                        <div>
                         <p id="pick-text">Pick a subject to get started</p>
@@ -54,7 +54,7 @@
                     <div className="component-div">
                     {Data.quizzes.map((quiz,index)=>(
                       
-                        <Tab  onClick={() => handleTabClick(index)}  key={index}  text={quiz.title}  path="/Question" svg={<img src={Iconarr[index]}/>}/>
+                        <Tab  onClick={() => handleTabClick(index)}  key={index}  text={quiz.title}  path="/Question" svg={<img src={Iconarr[index]} className="icon-id"/>}/>
                     ))}
                        
                         

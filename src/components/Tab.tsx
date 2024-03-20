@@ -26,7 +26,7 @@ function Tab({text,svg,head,path,backColor,textColor,className,isSelected,isCorr
     return(
         <div  className={ tabClassName} onClick={onClick}>
             <Link to={path} id="Tab-link">
-            <div className="Tab-div">
+            <div className="Tab-div" id="tab-div-page">
               <div className="Tab-div-inner">
                 <div className="icon-div" style={{ backgroundColor: backColor }}>{svg? svg:<p style={{ backgroundColor: backColor,color:textColor }}>{head}</p>}</div>
                 <div className="text-div"><h4 id="text-div-h4">{text}</h4></div>

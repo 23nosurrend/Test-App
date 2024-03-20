@@ -1,0 +1,65 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+#final-text-div{
+    color:white;
+    font-size: 30px;
+}
+
+#score-box{
+    width:300px;
+    height:200px;
+    background-color:#3B4D66;
+    border-radius: 5px;
+}
+
+#Final-father{
+   
+    display: flex;
+    justify-content: center;
+}
+#Final-child{
+    width:80%;
+   
+    display: flex;
+    justify-content: space-between
+}
+
+.nav-Final{
+    display:flex;
+    justify-content: space-between;
+    width:70%;
+   
+}
+
+#category-score{
+    display: flex;
+    justify-content: center;
+}
+#number-score{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+#out-of{
+    display:flex;
+    justify-content: center;
+}
+.nav-final-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-weight: bold;
+}
+.nav-Final-page-icon{
+    background-color:#F6E7FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}

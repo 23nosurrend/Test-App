@@ -15,11 +15,12 @@
    flex-wrap: wrap;
     
 }
-.inner{
+.page-inner{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top:30px;
+    
    
     
    
@@ -28,6 +29,7 @@
 .custom-tab:hover{
 border:2px solid purple;
 border-radius:10px;
+height:85px;
 font-weight: bolder;
 }
 #div-of-Question-Bar{
@@ -42,6 +44,51 @@ font-weight: bolder;
    
 }
 
+.body-div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width:80%;
+        
+       
+    }
+   #left-div-text{
+    width:100%;
+    
+    margin-bottom: 40px;
+   
+    
+   }
+   
+
+
+/* .body-father-div{
+    border:1px solid greenyellow
+}
+.body-div{
+    border:1px solid grey
+} */
+
+
+#div-answer{
+        
+   width: 100%;
+    
+}
+
+#tab-div-page{
+    background-color:#3B4D66 ;
+    width:500px;
+    height:80px;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 10px;
+    align-items: center;
+   
+
+}
+
+
 
 @media (max-width:1025px){
     #div-of-Question-Bar{
@@ -54,6 +101,17 @@ font-weight: bolder;
     #div-answer{
         
         width:800px
+    }
+    #tab-div-page{
+        background-color:#3B4D66 ;
+        width:100%;
+        height:80px;
+        display: flex;
+        justify-content: flex-start;
+        border-radius: 10px;
+        align-items: center;
+       
+    
     }
     
 }
@@ -102,6 +160,11 @@ font-weight: bolder;
     #div-with-Bar{
         margin-bottom:20px;
     }
+
+    .nav-text-div{  /*THis is ffrom nav*/
+  font-size: 16px;
+  margin-left: 5px;
+    }
 }
 
 @media (max-width:376px){
@@ -114,9 +177,28 @@ font-weight: bolder;
         
         
     }
+    #tab-div-page{
+        background-color:#3B4D66 ;
+        width:100%;
+        height:80px;
+        display: flex;
+        justify-content: flex-start;
+        border-radius: 10px;
+        align-items: center;
+       
+    
+    }
+    .custom-tab:hover{
+        border:2px solid purple;
+        border-radius:10px;
+        height:55px;
+        font-weight: bolder;
+        }
+
+
     #div-answer{
-        
-        width:298px
+       
+        width:200px
     }
 
     #Question-div{
@@ -125,6 +207,12 @@ font-weight: bolder;
     #div-with-Bar{
         margin-bottom:20px;
     }
+
+    .nav-text-div{  /*THis is ffrom nav*/
+        font-size: 16px;
+        margin-left: 5px;
+          }
+
 }
 
 @media (max-width:415px){
@@ -137,9 +225,28 @@ font-weight: bolder;
         
         
     }
+    #tab-div-page{
+        background-color:#3B4D66 ;
+        width:100%;
+        height:50px;
+        display: flex;
+        justify-content: flex-start;
+        border-radius: 10px;
+        align-items: center;
+       
+    
+    }
+
+    .custom-tab:hover{
+        border:2px solid purple;
+        border-radius:10px;
+        height:55px;
+        font-weight: bolder;
+        }
+
     #div-answer{
        
-        width:330px
+        width:315px
     }
 
     #Question-div{
@@ -150,28 +257,7 @@ font-weight: bolder;
     }
 }
 
-@media (max-width:376px){
-    .inner-container{
- 
-        width:80%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        
-        
-    }
-    #div-answer{
-      
-        width:287px
-    }
 
-    #Question-div{
-        margin-bottom: 20px;
-    }
-    #div-with-Bar{
-        margin-bottom:20px;
-    }
-}
 
 @media (max-width:320px){
     .inner-container{
@@ -194,4 +280,9 @@ font-weight: bolder;
     #div-with-Bar{
         margin-bottom:20px;
     }
+
+    .nav-text-div{  /*THis is ffrom nav*/
+        font-size: 16px;
+        margin-left: 15px;
+          }
 }
