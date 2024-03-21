@@ -1,9 +1,15 @@
 import "../styles/Final.css"
 import AccessNav from "./AccessNav"
 import Play from "./Playbtn"
+import { useNavigate } from "react-router-dom"
 
 
 function Final(){
+    const navigate=useNavigate()
+    const backHome=()=>{
+        navigate("/")
+    }
+   
     return(
         <div>
             <div>
@@ -29,8 +35,8 @@ function Final(){
                 
 
             </div>
-            <div id="play-btn-div">
-                    <Play/>
+            <div id="play-btn-div" >
+                    <Play onClick={()=>backHome()}/>
                 </div>
             </div>
             </div>

@@ -7,8 +7,16 @@ import Button from "./Button";
 import Bar from "./Downbar";
 import Data from "../assets/json/data.json";
 import "../styles/Page.css"
+import icon1 from "../assets/images/icon-html.svg"
+import icon2 from "../assets/images/icon-css.svg"
+import icon3 from "../assets/images/icon-js.svg"
+import icon4 from "../assets/images/icon-accessibility.svg"
 
 function Page() {
+    
+
+
+
   const [selectedTab, setSelectedTab] = useState<number | null>(null);
   const [correctness, setCorrectness] = useState<(boolean | undefined)[]>([]);
   const [buttonText, setButtonText] = useState("Submit Answer");
@@ -29,7 +37,22 @@ function Page() {
     setCorrectness([]);
     setButtonText("Submit Answer");
     setShowNextButton(false); // Reset to hide "Next Question" button
+    
+
   }, [num]);
+
+  useEffect(() => {
+    const handleBackNavigation = () => {
+      navigate("/");
+    };
+
+    window.addEventListener("popstate", handleBackNavigation);
+
+    return () => {
+      window.removeEventListener("popstate", handleBackNavigation);
+    };
+  }, [navigate]);
+
 
   const handleTabClick = (index: number, indexTab: number) => {
     navigate(`/question/${index}`);
@@ -44,7 +67,8 @@ function Page() {
       setCorrectness([]); // Reset correctness for the new question
       setButtonText("Submit Answer"); // Reset button text
     } else {
-      alert("You have reached the end of the quiz");
+        navigate("/final")
+      
     }
   };
 
@@ -61,11 +85,12 @@ function Page() {
   };
 
   const head: [string, string, string, string] = ["A", "B", "C", "D"];
-
+  const Iconarr=[icon1,icon2,icon3,icon4]
+  const found=Iconarr[num] || Iconarr[0]
   return (
     <div >
       <div>
-        <AccessNav />
+        <AccessNav icon={<img src={found}/>}/>
       </div>
       <div className="page-inner">
         <div className="inner-container" >

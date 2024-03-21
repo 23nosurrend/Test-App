@@ -95,6 +95,40 @@
     font-weight:100;
 }
 
+
+/* animation of HOme page  */
+.wel {
+    animation: moveFromLeft 2s  /* Apply animation */
+  }
+  
+  @keyframes moveFromLeft {
+    from {
+      transform: translateX(-100%); /* Start position */
+    }
+    to {
+      transform: translateX(70%); /* End position */
+    }
+  }
+
+
+   .Frontend-quiz {
+    animation: moveFromLeft 2s  /* Apply animation */
+  }
+  
+  @keyframes moveFromLeft {
+    from {
+      transform: translateX(-100%); /* Start position */
+    }
+    to {
+      transform: translateX(20%); /* End position */
+    }
+  }
+  
+
+
+
+
+
 /* Media Queries: */
 
 @media (max-width: 1024px) {
