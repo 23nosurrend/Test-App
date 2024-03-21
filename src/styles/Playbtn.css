@@ -1,10 +1,10 @@
 #play-btn{
     width:100%;
-    height: 50px;
+    height: 70px;
     background-color:purple;
     color:white;
-    border-radius: 10px;
-    font-size: 16px;
+    border-radius: 20px;
+    font-size: 20px;
 
 }
 #play-btn:hover{
@@ -27,11 +27,25 @@
 @media (max-width:768px){
     #play-btn{
         width:100%;
-        height: 80px;
+        height: 60px;
         background-color:purple;
         color:white;
         border-radius: 10px;
         font-size: 16px;
     
     }
+}
+
+@media (max-width:376px){
+    #play-btn{
+        width:100%;
+        height: 55px;
+        background-color:purple;
+        color:white;
+        border-radius: 10px;
+        font-size: 16px;
+    
+    }
+    
+   
 }

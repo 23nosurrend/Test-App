@@ -12,8 +12,8 @@ function Final(){
             <div id="Final-father">
             <div id="Final-child">
             <div id="final-text-div">
-                <h1>Quiz Completed</h1>
-                <h1 id="you-scored">You Scored</h1>
+                <p id="you-completed">Quiz Completed</p>
+                <p id="you-scored">You Scored....</p>
             </div>
 
            <div> 

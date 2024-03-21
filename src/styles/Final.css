@@ -6,21 +6,37 @@
 
 #final-text-div{
     color:white;
-    font-size: 30px;
+    
+    width:100%
 }
+#you-completed{
+    font-size: 55px;
+    font-weight: lighter;
+
+}
+#you-scored{
+    font-size: 50px;
+    font-weight: bolder;
+
+ }
+
+
 
 #score-box{
-    width:300px;
-    height:200px;
+    width:450px;
+    height:350px;
     background-color:#3B4D66;
-    border-radius: 5px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
 }
 
 #Final-father{
    
     display: flex;
     justify-content: center;
-    
+    flex-wrap: wrap;
+   
 }
 #Final-child{
     width:80%;
@@ -34,25 +50,29 @@
 }
 
 .nav-Final{
+    margin-top:30px;
     display:flex;
     justify-content: space-between;
-    width:45%;
-    border:1px solid green
+    width:30%;
+    
    
 }
 
 #category-score{
     display: flex;
     justify-content: center;
-    border:1px solid red;
+   
+    
 }
 #number-score{
     display:flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 70px;
+    height:70%;
     color:white;
     font-weight: bolder;
+   
 }
 #out-of{
     display:flex;
@@ -72,4 +92,296 @@
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+}
+
+/* THis is about  Media Querries */
+
+@media (max-width:1024px){
+
+    #you-completed{
+        font-size: 50px;
+        font-weight: lighter;
+    
+    }
+    #you-scored{
+        font-size: 45px;
+        font-weight: bolder;
+    
+     }
+
+
+     #score-box{
+        width:440px;
+        height:320px;
+        background-color:#3B4D66;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    
+    }
+    
+}
+
+
+
+@media (max-width:768px){
+    .nav-Final{
+        display:flex;
+        justify-content: space-between;
+        width:40%;
+        
+       
+    }
+
+    #you-completed{
+        font-size: 30px;
+        font-weight: lighter;
+    
+    }
+    #you-scored{
+        font-size: 25px;
+        font-weight: bolder;
+    
+     }
+
+
+     #score-box{
+        width:340px;
+        height:220px;
+        background-color:#3B4D66;
+        border-radius: 20px;
+        margin-bottom: 12px;
+    
+    }
+
+
+    #number-score{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        height:70%;
+        color:white;
+        font-weight: bolder;
+        
+    }
+
+    
+}
+
+
+
+
+
+@media (max-width:600px){
+
+    .nav-Final{
+        display:flex;
+        gap:10px;
+        width:30%;
+        
+       
+    }
+
+    #you-completed{
+        font-size: 40px;
+        font-weight: lighter;
+    
+    }
+    #you-scored{
+        font-size: 35px;
+        font-weight: bolder;
+        margin-bottom: 30px;
+    
+     }
+
+
+     #score-box{
+        width:100%;
+        height:250px;
+        background-color:#3B4D66;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    
+    }
+
+
+    #number-score{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        height:70%;
+        color:white;
+        font-weight: bolder;
+        
+    }
+
+    #Final-child{
+        width:80%;
+       
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+   
+}
+
+@media (max-width:376px){
+    .nav-Final{
+        display:flex;
+        gap:10px;
+        width:45%;
+       
+       
+    }
+
+    #you-completed{
+        font-size: 35px;
+        font-weight: lighter;
+    
+    }
+    #you-scored{
+        font-size: 30px;
+        font-weight: bolder;
+        margin-bottom: 30px;
+    
+     }
+
+
+     #score-box{
+        width:100%;
+        height:250px;
+        background-color:#3B4D66;
+        border-radius: 20px;
+        margin-bottom: 10px;
+    
+    }
+
+
+    #number-score{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        height:70%;
+        color:white;
+        font-weight: bolder;
+        
+    }
+
+    #Final-child{
+        width:80%;
+       
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+   
+}
+
+@media (max-width:321px){
+    .nav-Final{
+        display:flex;
+        justify-content: space-between;
+        width:50%;
+       
+       
+    }
+
+    #you-completed{
+        font-size: 30px;
+        font-weight: lighter;
+    
+    }
+    #you-scored{
+        font-size: 25px;
+        font-weight: bolder;
+        margin-bottom: 30px;
+    
+     }
+
+
+     #score-box{
+        width:100%;
+        height:2000px;
+        background-color:#3B4D66;
+        border-radius: 20px;
+        margin-bottom: 10px;
+    
+    }
+
+
+    #number-score{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        height:70%;
+        color:white;
+        font-weight: bolder;
+        
+    }
+
+    #Final-child{
+        width:80%;
+       
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+   
+}
+
+
+@media (max-width:414px){
+    .nav-Final{
+        display:flex;
+        justify-content: space-between;
+        width:40%;
+        
+       
+    }
+
+    #you-completed{
+        font-size: 35px;
+        font-weight: lighter;
+    
+    }
+    #you-scored{
+        font-size: 30px;
+        font-weight: bolder;
+        margin-bottom: 30px;
+    
+     }
+
+
+     #score-box{
+        width:100%;
+        height:250px;
+        background-color:#3B4D66;
+        border-radius: 20px;
+        margin-bottom: 10px;
+    
+    }
+
+
+    #number-score{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        height:70%;
+        color:white;
+        font-weight: bolder;
+        
+    }
+
+    #Final-child{
+        width:80%;
+       
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+   
 }
