@@ -20,6 +20,7 @@
    
     display: flex;
     justify-content: center;
+    
 }
 #Final-child{
     width:80%;
@@ -27,27 +28,36 @@
     display: flex;
     justify-content: space-between
 }
+#you-scored{
+    color:white;
+    font-weight: bolder;
+}
 
 .nav-Final{
     display:flex;
     justify-content: space-between;
-    width:70%;
+    width:45%;
+    border:1px solid green
    
 }
 
 #category-score{
     display: flex;
     justify-content: center;
+    border:1px solid red;
 }
 #number-score{
     display:flex;
     justify-content: center;
     align-items: center;
     font-size: 40px;
+    color:white;
+    font-weight: bolder;
 }
 #out-of{
     display:flex;
     justify-content: center;
+    color:#ABC1E1
 }
 .nav-final-page{
     display: flex;
