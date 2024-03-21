@@ -124,7 +124,19 @@
     }
   }
   
-
+  .component-div {
+    animation: moveFromRight 2s  /* Apply animation */
+  }
+  
+  @keyframes moveFromRight {
+    from {
+      transform: translateX(100%); /* Start position */
+    }
+    to {
+      transform: translateX(0%); /* End position */
+    }
+  }
+  
 
 
 
