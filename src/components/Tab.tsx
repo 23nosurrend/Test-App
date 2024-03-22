@@ -7,6 +7,7 @@ import "../styles/Tab.css"
 interface Tabprops{
     text:string;
     svg?:ReactElement;
+    svg2?:React.ReactNode;
     head?:string;
     path:string;
     backColor?:string;
@@ -20,7 +21,7 @@ interface Tabprops{
   
 
 }
-function Tab({text,svg,head,path,backColor,textColor,className,isSelected,isCorrect,onClick}:Tabprops){
+function Tab({text,svg,svg2,head,path,backColor,textColor,className,isSelected,isCorrect,onClick}:Tabprops){
   const tabClassName=`${className} ${isSelected ? "selected": ""  } ${isCorrect !== undefined ? (isCorrect ? "correct" : "incorrect") : ""} `
  
     return(
@@ -29,7 +30,13 @@ function Tab({text,svg,head,path,backColor,textColor,className,isSelected,isCorr
             <div className="Tab-div" id="tab-div-page">
               <div className="Tab-div-inner">
                 <div className="icon-div" style={{ backgroundColor: backColor }}>{svg? svg:<p style={{ backgroundColor: backColor,color:textColor }}>{head}</p>}</div>
-                <div className="text-div"><h4 id="text-div-h4">{text}</h4></div>
+                <div className="text-div">
+                  <h4 id="text-div-h4">{text}</h4>
+                  <div>
+                      {svg2}
+                  </div>
+                 
+                </div>
               </div>
             </div>
             </Link>

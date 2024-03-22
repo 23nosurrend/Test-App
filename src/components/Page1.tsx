@@ -11,6 +11,9 @@ import icon1 from "../assets/images/icon-html.svg"
 import icon2 from "../assets/images/icon-css.svg"
 import icon3 from "../assets/images/icon-js.svg"
 import icon4 from "../assets/images/icon-accessibility.svg"
+ 
+import correctIcon from "../assets/images/icon-correct.svg"
+import incorrectIcon from "../assets/images/icon-incorrect.svg"
 
 function Page() {
     
@@ -22,6 +25,7 @@ function Page() {
   const [buttonText, setButtonText] = useState("Submit Answer");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showNextButton, setShowNextButton] = useState(false); // State to track whether to show "Next Question" button
+  //const [answerSubmitted, setAnswerSubmitted] = useState(false)
   const navigate = useNavigate();
   const param = useParams<{ index?: string }>();
   const num = parseInt(param.index ?? "0");
@@ -66,6 +70,7 @@ function Page() {
       setSelectedTab(null); // Reset selectedTab for the new question
       setCorrectness([]); // Reset correctness for the new question
       setButtonText("Submit Answer"); // Reset button text
+      
     } else {
         navigate("/final")
       
@@ -79,7 +84,9 @@ function Page() {
       setCorrectness(newCorrectness);
       setButtonText("Next Question");
       setShowNextButton(true); // Show "Next Question" button after submitting
-    } else {
+      
+    }
+    else {
       alert("Please select an answer");
     }
   };
@@ -114,12 +121,13 @@ function Page() {
                     isSelected={selectedTab === Tabindex}
                     onClick={() => handleTabClick(num, Tabindex)}
                     text={answers}
-                    path="/Question"
+                    path="/"
                     head={head[Tabindex]}
                     backColor="#F4F6FA"
                     textColor="#626C7F"
                     className="custom-tab"
                     isCorrect={correctness[Tabindex]}
+                    svg2={correctness[Tabindex] ? <img src={correctIcon} alt="Correct" /> : (selectedTab === Tabindex && buttonText === "Next Question" && realAnswer !== option[Tabindex] ? <img src={incorrectIcon} alt="Incorrect" /> : null)}
                   />
                   <br />
                 </div>

@@ -54,7 +54,7 @@
                     <div className="component-div">
                     {Data.quizzes.map((quiz,index)=>(
                       
-                        <Tab  onClick={() => handleTabClick(index)}  key={index}  text={quiz.title}  path="/Question" svg={<img src={Iconarr[index]} className="icon-id"/>}/>
+                        <Tab  onClick={() => handleTabClick(index)}  key={index}  text={quiz.title}  path="/" svg={<img src={Iconarr[index]} className="icon-id"/>}/>
                     ))}
                        
                         

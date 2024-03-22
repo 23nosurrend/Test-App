@@ -94,9 +94,16 @@ font-weight: bolder;
     #div-of-Question-Bar{
         display:flex;
         flex-direction: column;
+        margin-bottom: 20px;
+        border: 1px solid red;
          
         width:100%
        
+    }
+
+    #div-with-Bar{
+        margin-top:10px;
+        margin-bottom: 10px;
     }
     #div-answer{
         
