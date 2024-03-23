@@ -25,6 +25,8 @@ function Page() {
   const [buttonText, setButtonText] = useState("Submit Answer");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showNextButton, setShowNextButton] = useState(false); // State to track whether to show "Next Question" button
+  const [please,setPlease]=useState("")
+  const [pleaseIcon,setPleaseIcon]=useState<string>("")
   //const [answerSubmitted, setAnswerSubmitted] = useState(false)
   const navigate = useNavigate();
   const param = useParams<{ index?: string }>();
@@ -45,17 +47,6 @@ function Page() {
 
   }, [num]);
 
-  useEffect(() => {
-    const handleBackNavigation = () => {
-      navigate("/");
-    };
-
-    window.addEventListener("popstate", handleBackNavigation);
-
-    return () => {
-      window.removeEventListener("popstate", handleBackNavigation);
-    };
-  }, [navigate]);
 
 
   const handleTabClick = (index: number, indexTab: number) => {
@@ -80,14 +71,25 @@ function Page() {
   const submitBtn = () => {
     if (selectedTab !== null) {
       const newCorrectness = [...correctness];
-      newCorrectness[selectedTab] = realAnswer === option[selectedTab];
+      const selectedAnswerIndex = selectedTab;
+      const isCorrect = realAnswer === option[selectedAnswerIndex];
+      newCorrectness[selectedAnswerIndex] = isCorrect;
+      
+      // Find the index of the correct answer
+      const correctAnswerIndex = option.findIndex((answer) => answer === realAnswer);
+      if (correctAnswerIndex !== -1) {
+        // Update the correctness for the correct answer tab
+        newCorrectness[correctAnswerIndex] = true;
+      }
+      
       setCorrectness(newCorrectness);
       setButtonText("Next Question");
       setShowNextButton(true); // Show "Next Question" button after submitting
       
-    }
-    else {
-      alert("Please select an answer");
+    } else {
+        setPleaseIcon(incorrectIcon)
+        setPlease("Please Select an Answer")
+        
     }
   };
 
@@ -115,29 +117,35 @@ function Page() {
           </div>
           <div>
             <div id="div-answer">
-              {option.map((answers: string, Tabindex: number) => (
-                <div key={Tabindex}>
-                  <Tab
-                    isSelected={selectedTab === Tabindex}
-                    onClick={() => handleTabClick(num, Tabindex)}
-                    text={answers}
-                    path="/"
-                    head={head[Tabindex]}
-                    backColor="#F4F6FA"
-                    textColor="#626C7F"
-                    className="custom-tab"
-                    isCorrect={correctness[Tabindex]}
-                    svg2={correctness[Tabindex] ? <img src={correctIcon} alt="Correct" /> : (selectedTab === Tabindex && buttonText === "Next Question" && realAnswer !== option[Tabindex] ? <img src={incorrectIcon} alt="Incorrect" /> : null)}
-                  />
-                  <br />
-                </div>
-              ))}
+            {option.map((answers: string, Tabindex: number) => (
+  <div key={Tabindex}>
+    <Tab
+      isSelected={selectedTab === Tabindex}
+      onClick={() => handleTabClick(num, Tabindex)}
+      text={answers}
+      path="/"
+      head={head[Tabindex]}
+      backColor="#F4F6FA"
+      textColor="#626C7F"
+      className="custom-tab"
+      isCorrect={correctness[Tabindex]}
+      // Show correct icon only for the correct answer
+      svg2={selectedTab === Tabindex && correctness[Tabindex] !== undefined ? (correctness[Tabindex] ? <img src={correctIcon} alt="Correct" /> : <img src={incorrectIcon} alt="Incorrect" />) : null}
+    />
+    <br />
+  </div>
+))}
+
             </div>
             <div>
               <Button
                 buttonText={showNextButton ? "Next Question" : buttonText}
                 onClick={showNextButton ? handleNextQuestion : submitBtn}
               />
+              <div id="please-select">
+                <div> <img id="please-select-img"src={pleaseIcon}></img></div>
+                <div><p>{please}</p></div>
+              </div>
             </div>
           </div>
         </div>

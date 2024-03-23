@@ -87,7 +87,29 @@ font-weight: bolder;
    
 
 }
+#please-select{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+   
+    gap:7px;
+    animation:slideIn 3s ease-in-out forwards ;
 
+}
+#please-select-img{
+    width: 30px;
+}
+@keyframes slideIn{
+  from{
+     transform:translateY(-1000%)
+
+  }
+  to{
+     transform:translateY(0%)
+  }
+
+}
 
 
 @media (max-width:1025px){
@@ -95,8 +117,6 @@ font-weight: bolder;
         display:flex;
         flex-direction: column;
         margin-bottom: 20px;
-        border: 1px solid red;
-         
         width:100%
        
     }
@@ -120,6 +140,12 @@ font-weight: bolder;
        
     
     }
+    .custom-tab:hover{
+        border:2px solid purple;
+        border-radius:10px;
+        height:85px;
+        font-weight: bolder;
+        }
     
 }
 
@@ -156,6 +182,13 @@ font-weight: bolder;
         
         
     }
+    .custom-tab:hover{
+        border:2px solid purple;
+        border-radius:10px;
+        height:85px;
+        font-weight: bolder;
+        }
+
     #div-answer{
       
         width:480px

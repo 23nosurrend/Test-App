@@ -68,10 +68,12 @@
 
 .correct {
     border:2px solid  green; /* Border color when answer is correct */
+    border-radius: 10px;
   }
   
   .incorrect {
     border:2px solid  red; /* Border color when answer is incorrect */
+
   }
 
   /*  */
