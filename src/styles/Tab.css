@@ -69,6 +69,7 @@
 .correct {
     border:2px solid  green; /* Border color when answer is correct */
     border-radius: 10px;
+    
   }
   
   .incorrect {
@@ -90,8 +91,55 @@
         border-radius: 10px;
       
     }
+    .correct {
+        border:2px solid  green; /* Border color when answer is correct */
+        border-radius: 10px;
+        height:85px
+        
+      }
+      
+      .incorrect {
+        border:2px solid  red; /* Border color when answer is incorrect */
+        border-radius: 10px;
+        height:85px
+    
+      }
    
 }
+
+ @media (max-width:820px) {  /*this is Ipd AI it css is facing issue */
+    .Tab-div{
+        background-color:#3B4D66 ;
+        width:200px;
+        height:40px;
+        display: flex;
+        justify-content: flex-start;
+        border-radius: 120px;
+        align-items: center;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      
+    }
+    .correct {
+        border:2px solid  green; /* Border color when answer is correct */
+        border-radius: 10px;
+        height:85px
+        
+      }
+      
+      .incorrect {
+        border:2px solid  red; /* Border color when answer is incorrect */
+        border-radius: 10px;
+        height:85px
+    
+      }
+   
+}
+
+
+
+
+
 
 @media (max-width:769px) {
     .Tab-div{
@@ -106,6 +154,19 @@
         border-radius: 10px;
       
     }
+    .correct {
+        border:2px solid  green; /* Border color when answer is correct */
+        border-radius: 10px;
+        height:85px
+        
+      }
+      
+      .incorrect {
+        border:2px solid  red; /* Border color when answer is incorrect */
+        border-radius: 10px;
+        height:85px
+    
+      }
    
 }
 
@@ -128,7 +189,53 @@
    
 }
 
-    @media (max-width:376px){
+@media (max-width:376px){
+    .Tab-div{
+        background-color:#3B4D66 ;
+        width:100%;
+        height:40px;
+        display: flex;
+        justify-content: flex-start;
+        
+        align-items: center;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      
+    }
+
+    .icon-div{
+        background-color:#FFF1E9;
+        width:40px;
+        height:40px;
+        border-radius: 5px;
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left:5px
+        
+    }
+
+    .text-div{
+        background-color:#3B4D66 ;
+        font-size:16px;
+        color:white;
+        font-weight: bolder;
+        display:flex;
+        justify-content:flex-start;
+        align-items: center;
+       width:100%;
+       margin-left:10px;
+       border-top-right-radius: inherit;
+       border-bottom-right-radius: inherit
+       
+       
+    }
+
+}
+
+
+    @media (max-width:430px){
         .Tab-div{
             background-color:#3B4D66 ;
             width:100%;
@@ -171,5 +278,43 @@
            
         }
 
+        .correct {
+            border:2px solid  green; /* Border color when answer is correct */
+            border-radius: 10px;
+            height:55px
+            
+          }
+          
+          .incorrect {
+            border:2px solid  red; /* Border color when answer is incorrect */
+            border-radius: 10px;
+            height:55px
+        
+          }
+
     }
 
+    
+
+
+
+
+
+
+
+
+    @media (max-width:281px){
+        .Tab-div{
+            background-color:#3B4D66 ;
+            width:100%;
+            height:40px;
+            display: flex;
+            justify-content: flex-start;
+            
+            align-items: center;
+            margin-bottom: 10px;
+            border-radius: 10px;
+          
+        }
+
+    }

@@ -320,23 +320,54 @@
     margin-bottom: 20px;
    
 }
-/* .wel{
-    color:red;
-    font-size:20px;
-    font-family:'Rubik' sans-serif;
-    font-weight:500;
-   
+
+
+
+}
+
+@media (max-width:281px){
+    #intro-text{
+        font-size: 24px;
+      
+    }
+    .body-div-home{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width:80%;
+       
+        
+        
+        
+       
+    }
+   #left-div-text{
+    width:100%;
     
+    margin-bottom: 35px;
+    
+   }
+  
+   .component-div{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    width:100%;
+    flex-direction: column;
+    margin-bottom: 10px;
+   
+   
 }
-.Frontend-quiz{
-    color:white;
-    font-size:200px;
-    font-family:'Rubik' sans-serif;
-    font-weight:bold;
-} */
 
 
+
 }
+
+
+
+
+
+
 
 
 

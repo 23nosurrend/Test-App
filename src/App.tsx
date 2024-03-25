@@ -24,7 +24,7 @@ function App() {
       element:<Play/>
     },
     {
-     path:"/final",
+     path:"/final/:num/:count",
      element:<Final/>
     },
     {

@@ -3,10 +3,11 @@ import "../styles/AccessNav.css"
 
 
 interface acessIcon{
-  icon?:ReactElement
+  icon?:ReactElement;
+  title?:string
 }
 
-function AccessNav({icon}:acessIcon){
+function AccessNav({icon,title}:acessIcon){
     return(
       
         <div className="nav">
@@ -14,7 +15,7 @@ function AccessNav({icon}:acessIcon){
             <div className="nav-div">
               <div className="nav-div-inner">
                 <div className="nav-icon-div">{icon}</div>
-                <div className="nav-text-div"><p>Accessbility</p></div>
+                <div className="nav-text-div"><p>{title}</p></div>
               </div>
             </div>
             <div id="outer1">

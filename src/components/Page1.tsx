@@ -17,7 +17,7 @@ import incorrectIcon from "../assets/images/icon-incorrect.svg"
 
 function Page() {
     
-
+    const Titles=["HTML","CSS","Javascript","Accessibility"]
 
 
   const [selectedTab, setSelectedTab] = useState<number | null>(null);
@@ -27,6 +27,7 @@ function Page() {
   const [showNextButton, setShowNextButton] = useState(false); // State to track whether to show "Next Question" button
   const [please,setPlease]=useState("")
   const [pleaseIcon,setPleaseIcon]=useState<string>("")
+  const [correctCount,setCorrectCount]=useState(0)
   //const [answerSubmitted, setAnswerSubmitted] = useState(false)
   const navigate = useNavigate();
   const param = useParams<{ index?: string }>();
@@ -63,7 +64,7 @@ function Page() {
       setButtonText("Submit Answer"); // Reset button text
       
     } else {
-        navigate("/final")
+        navigate(`/final/${num}/${correctCount}`)
       
     }
   };
@@ -74,6 +75,11 @@ function Page() {
       const selectedAnswerIndex = selectedTab;
       const isCorrect = realAnswer === option[selectedAnswerIndex];
       newCorrectness[selectedAnswerIndex] = isCorrect;
+
+      if(isCorrect){
+        setCorrectCount(correctCount+1)
+        
+      }
       
       // Find the index of the correct answer
       const correctAnswerIndex = option.findIndex((answer) => answer === realAnswer);
@@ -93,13 +99,18 @@ function Page() {
     }
   };
 
+
   const head: [string, string, string, string] = ["A", "B", "C", "D"];
   const Iconarr=[icon1,icon2,icon3,icon4]
   const found=Iconarr[num] || Iconarr[0]
   return (
     <div >
       <div>
-        <AccessNav icon={<img src={found}/>}/>
+        <AccessNav
+         title={Titles[num]}
+         icon={<img src={found}/>}
+         
+         />
       </div>
       <div className="page-inner">
         <div className="inner-container" >
@@ -116,25 +127,26 @@ function Page() {
             </div>
           </div>
           <div>
-            <div id="div-answer">
+         <div id="div-answer">
             {option.map((answers: string, Tabindex: number) => (
-  <div key={Tabindex}>
-    <Tab
-      isSelected={selectedTab === Tabindex}
-      onClick={() => handleTabClick(num, Tabindex)}
-      text={answers}
-      path="/"
-      head={head[Tabindex]}
-      backColor="#F4F6FA"
-      textColor="#626C7F"
-      className="custom-tab"
-      isCorrect={correctness[Tabindex]}
-      // Show correct icon only for the correct answer
-      svg2={selectedTab === Tabindex && correctness[Tabindex] !== undefined ? (correctness[Tabindex] ? <img src={correctIcon} alt="Correct" /> : <img src={incorrectIcon} alt="Incorrect" />) : null}
-    />
-    <br />
-  </div>
-))}
+          <div key={Tabindex}>
+            <Tab
+            isSelected={selectedTab === Tabindex}
+            onClick={() => handleTabClick(num, Tabindex)}
+            text={answers}
+            path="/"
+            head={head[Tabindex]}
+            backColor="#F4F6FA"
+            textColor="#626C7F"
+            className="custom-tab"
+            isCorrect={correctness[Tabindex]}
+            
+            // Show correct icon only for the correct answer
+            svg2={selectedTab === Tabindex && correctness[Tabindex] !== undefined ? (correctness[Tabindex] ? <img src={correctIcon} alt="Correct" /> : <img src={incorrectIcon} alt="Incorrect" />) : null}
+            />
+            <br />
+           </div>
+              ))}
 
             </div>
             <div>
