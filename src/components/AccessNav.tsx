@@ -4,7 +4,8 @@ import "../styles/AccessNav.css"
 
 interface acessIcon{
   icon?:ReactElement;
-  title?:string
+  title?:string;
+  onClick?:()=>void
 }
 
 function AccessNav({icon,title}:acessIcon){

@@ -7,6 +7,7 @@ import icon1 from "../assets/images/icon-html.svg"
 import icon2 from "../assets/images/icon-css.svg"
 import icon3 from "../assets/images/icon-js.svg"
 import icon4 from "../assets/images/icon-accessibility.svg"
+import { useState } from "react"
 
 
 
@@ -24,13 +25,19 @@ function Final(){
     const marks=parseInt(param.count??"0")
     const found=Iconarr[current] || Iconarr[0]
     console.log(current)
+    const[background,setBackground]=useState("#313E51")
+
+    const changeBackground=()=>{
+        setBackground("#FFFFFF")
+    }
    
     return(
-        <div>
+        <div style={{background}}>
             <div>
                <AccessNav
                 title={Titles[current]}
                 icon={<img src={found}/>}
+                onClick={changeBackground}
                />
             </div>
             <div id="Final-father">
