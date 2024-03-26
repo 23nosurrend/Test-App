@@ -14,6 +14,8 @@ import icon4 from "../assets/images/icon-accessibility.svg"
  
 import correctIcon from "../assets/images/icon-correct.svg"
 import incorrectIcon from "../assets/images/icon-incorrect.svg"
+import lightImage  from "../assets/images/pattern-background-desktop-light.svg"
+import darkImage from "../assets/images/pattern-background-desktop-dark.svg"
 
 function Page() {
     
@@ -103,13 +105,39 @@ function Page() {
   const head: [string, string, string, string] = ["A", "B", "C", "D"];
   const Iconarr=[icon1,icon2,icon3,icon4]
   const found=Iconarr[num] || Iconarr[0]
+  const [isLightBackground,setBackgroundColor]=useState(true)
+  const contentThemeClass=isLightBackground?"light":"dark"
+  const tabNewbackground=isLightBackground?"scoreboxWhite":"scoreboxDark"
+  const changeBackground=()=>{
+  
+
+
+
+    if(isLightBackground){
+     document.body.style.backgroundColor="#313E51"
+      document.body.style.backgroundImage=`url(${darkImage})`
+     
+    
+    }else{
+     document.body.style.backgroundColor="#ffffff"
+      document.body.style.backgroundImage=`url(${lightImage})`
+     
+     
+    }
+    setBackgroundColor(!isLightBackground)
+    // setBackgroundImage(!backgroundImage)
+    
+ }
+
+
   return (
     <div >
       <div>
         <AccessNav
+         navTextClass={contentThemeClass}
          title={Titles[num]}
          icon={<img src={found}/>}
-         
+         onClick={changeBackground}
          />
       </div>
       <div className="page-inner">
@@ -117,6 +145,8 @@ function Page() {
           <div id="div-of-Question-Bar">
             <div id="Question-div">
               <Question
+                questionTitleClass={contentThemeClass}
+                questionTextclass={contentThemeClass}
                 first={currentQuestionIndex + 1}
                 last={questions.length}
                 question={currentQuestion.question}
@@ -140,6 +170,7 @@ function Page() {
             textColor="#626C7F"
             className="custom-tab"
             isCorrect={correctness[Tabindex]}
+            tabBackColor={tabNewbackground}
             
             // Show correct icon only for the correct answer
             svg2={selectedTab === Tabindex && correctness[Tabindex] !== undefined ? (correctness[Tabindex] ? <img src={correctIcon} alt="Correct" /> : <img src={incorrectIcon} alt="Incorrect" />) : null}

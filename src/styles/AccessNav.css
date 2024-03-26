@@ -21,7 +21,7 @@
 }
 .nav-text-div{
     font-size:22px;
-    color:white;
+   font-weight: bolder;
     
     display:flex;
     justify-content: center;

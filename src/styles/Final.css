@@ -5,7 +5,7 @@
 }
 
 #final-text-div{
-    color:white;
+    
     
     width:100%
 }
@@ -25,10 +25,18 @@
 #score-box{
     width:450px;
     height:350px;
-    background-color:#3B4D66;
+   
     border-radius: 20px;
     margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 
+}
+
+.scoreboxWhite{
+    background-color: white;
+}
+.scoreboxDark{
+    background-color:#3B4D66;
 }
 
 #Final-father{
@@ -45,7 +53,7 @@
     justify-content: space-between
 }
 #you-scored{
-    color:white;
+    
     font-weight: bolder;
 }
 
@@ -93,6 +101,17 @@
     align-items: center;
     border-radius: 5px;
 }
+
+
+
+/* after chaning teh  the theme */
+.light{
+    color:#313E51
+}
+.dark{
+   color:#F4F6FA
+}
+
 
 /* THis is about  Media Querries */
 
