@@ -15,7 +15,8 @@ interface Tabprops {
   isSelected?: boolean;
   isCorrect?: boolean;
   onClick?: () => void;
-  tabBackColor?:string
+  tabBackColor?:string;
+  innerTextcolor?:string
 }
 
 function Tab({
@@ -30,6 +31,7 @@ function Tab({
   isSelected,
   isCorrect,
   tabBackColor,
+  innerTextcolor,
   onClick
 }: Tabprops) {
   const tabClassName = `${className} ${
@@ -40,12 +42,12 @@ function Tab({
     <div className={tabClassName} onClick={onClick}>
       <Link to={path} id="Tab-link">
         <div className={`Tab-div ${tabBackColor}`} id="tab-div-page">
-          <div className="Tab-div-inner">
+          <div className={`Tab-div-inner ${tabBackColor}`}>
             <div className="icon-div" style={{ backgroundColor: backColor }}>
               {svg ? svg : <p style={{ backgroundColor: backColor, color: textColor }}>{head}</p>}
             </div>
-            <div className="text-div">
-              <h4 id="text-div-h4">{text}</h4>
+            <div className={`text-div ${tabBackColor}`}>
+              <h4 id="text-div-h4" className={innerTextcolor}>{text}</h4>
               <div>
                 {/* Show the correct icon if it's the correct answer */}
                 {isCorrect && <img src={correctIcon} alt="Correct" />}

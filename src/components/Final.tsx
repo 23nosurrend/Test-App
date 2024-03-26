@@ -53,7 +53,7 @@ function Final(){
        
     }
    
-     const contentThemeClass=isLightBackground?"light":"dark"
+     const contentThemeClass=isLightBackground?"dark":"light"
      const scoreBoxbackground=isLightBackground?"scoreboxWhite":"scoreboxDark"
     return(
         <div >

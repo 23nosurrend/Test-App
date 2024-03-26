@@ -31,6 +31,7 @@ function Page() {
   const [pleaseIcon,setPleaseIcon]=useState<string>("")
   const [correctCount,setCorrectCount]=useState(0)
   //const [answerSubmitted, setAnswerSubmitted] = useState(false)
+  // this about chaning Background Color
   const navigate = useNavigate();
   const param = useParams<{ index?: string }>();
   const num = parseInt(param.index ?? "0");
@@ -105,8 +106,9 @@ function Page() {
   const head: [string, string, string, string] = ["A", "B", "C", "D"];
   const Iconarr=[icon1,icon2,icon3,icon4]
   const found=Iconarr[num] || Iconarr[0]
+  const [backgroundImage,setBackgroundImage]=useState(true)
   const [isLightBackground,setBackgroundColor]=useState(true)
-  const contentThemeClass=isLightBackground?"light":"dark"
+  const contentThemeClass=isLightBackground?"dark":"light"
   const tabNewbackground=isLightBackground?"scoreboxWhite":"scoreboxDark"
   const changeBackground=()=>{
   
@@ -119,16 +121,16 @@ function Page() {
      
     
     }else{
-     document.body.style.backgroundColor="#ffffff"
+     document.body.style.backgroundColor="#F4F6FA"
       document.body.style.backgroundImage=`url(${lightImage})`
      
      
     }
     setBackgroundColor(!isLightBackground)
-    // setBackgroundImage(!backgroundImage)
+    setBackgroundImage(!backgroundImage)
     
  }
-
+ const innerTextcolor=isLightBackground?"dark":"light"
 
   return (
     <div >
@@ -161,6 +163,7 @@ function Page() {
             {option.map((answers: string, Tabindex: number) => (
           <div key={Tabindex}>
             <Tab
+            innerTextcolor={innerTextcolor}
             isSelected={selectedTab === Tabindex}
             onClick={() => handleTabClick(num, Tabindex)}
             text={answers}
