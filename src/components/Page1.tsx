@@ -131,15 +131,18 @@ function Page() {
     
  }
  const innerTextcolor=isLightBackground?"dark":"light"
+ const changePosition=isLightBackground?"start":"end"
 
   return (
     <div >
       <div>
         <AccessNav
+          changePositionClass={changePosition}
          navTextClass={contentThemeClass}
          title={Titles[num]}
          icon={<img src={found}/>}
          onClick={changeBackground}
+
          />
       </div>
       <div className="page-inner">
